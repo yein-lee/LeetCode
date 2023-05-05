@@ -13,6 +13,7 @@ class Solution:
         
         while q:
             qLen = len(q)
+            
             level = []
             for i in range(qLen):
                 node = q.popleft()
@@ -20,6 +21,7 @@ class Solution:
                     level.append(node.val)
                     q.append(node.left)
                     q.append(node.right)
+            
             if level:
                 res.append(level)
             
