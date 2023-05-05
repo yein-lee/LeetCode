@@ -19,10 +19,9 @@ class Solution {
         List<List<Integer>> res = new ArrayList<>();
         
         Deque<TreeNode> q = new ArrayDeque<>();
-        if(root == null){
-            return res;
+        if(root != null){
+            q.add(root);
         }
-        q.add(root);
         
         while(q.size() > 0){
             int qLen = q.size();
