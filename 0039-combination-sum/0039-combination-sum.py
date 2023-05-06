@@ -4,11 +4,12 @@ class Solution:
         res = []
         
         def dfs(i, cur, total):
-            if total == target:
-                res.append(cur.copy())
+
+            if i>=len(candidates) or total>target:
                 return
             
-            if i >= len(candidates) or total > target:
+            if total==target:
+                res.append(cur.copy())
                 return
             
             cur.append(candidates[i])
